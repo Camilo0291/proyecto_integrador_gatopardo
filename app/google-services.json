@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "472793398983",
+    "project_id": "prgatopardo",
+    "storage_bucket": "prgatopardo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472793398983:android:e971ff756e6730068948e2",
+        "android_client_info": {
+          "package_name": "com.example.movilesgatopardo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3aedLJlmDSel_xcnLf0JDX8AGJLTAgEE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

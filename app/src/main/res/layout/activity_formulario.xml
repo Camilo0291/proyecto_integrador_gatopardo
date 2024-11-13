@@ -1,0 +1,167 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#004F5A"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/main">
+
+        <!-- Título del formulario -->
+        <TextView
+            android:id="@+id/registroTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Regístrate al curso"
+            android:textSize="30sp"
+            android:fontFamily="@font/andbasr"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Campos de entrada de texto -->
+        <!-- Campos de entrada de texto -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#FFFFFF"
+            android:hint="Primer nombre *"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#FFFFFF"
+            android:hint="Segundo nombre"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#FFFFFF"
+            android:hint="Primer apellido*"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#FFFFFF"
+            android:hint="Segundo apellido"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#FFFFFF"
+            android:hint="Número de documento *"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#FFFFFF"
+            android:hint="Tipo de documento"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#FFFFFF"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#FFFFFF"
+            android:hint="Nombre del curso*"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#FFFFFF"
+            android:hint="Horario de preferencia"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
+
+        <!-- Botones de Enviar y Finalizar alineados horizontalmente -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/enviarButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Enviar"
+                android:textSize="20sp"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/andbasr"
+                android:padding="15dp"
+                app:cornerRadius="8dp"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/finalizarButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Finalizar"
+                android:textSize="20sp"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/andbasr"
+                android:padding="15dp"
+                app:cornerRadius="8dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

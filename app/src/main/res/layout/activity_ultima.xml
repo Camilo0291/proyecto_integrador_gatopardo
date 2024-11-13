@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#004F5A"
+    android:id="@+id/main">
+
+
+    <!-- Imagen de Logo -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_gravity="center"
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        android:src="@drawable/logitogatopardo02"
+        android:contentDescription="Logo Gato Pardo Talleres"
+        />
+
+    <!-- Mensaje Principal -->
+    <TextView
+        android:id="@+id/graciasMensaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/mensaje"
+        android:textSize="44sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <!-- Mensaje Secundario -->
+    <TextView
+        android:id="@+id/infoMensaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/mensage0"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/executive"
+        android:gravity="center" />
+
+    <!-- Botón de Volver -->
+    <Button
+        android:id="@+id/volverButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/mensaje1"
+        android:textColor="@color/black"
+        android:backgroundTint="#FFFFFF"
+        android:textStyle="bold"
+        android:fontFamily="@font/andbasr"
+        android:padding="12dp" />
+
+</LinearLayout>

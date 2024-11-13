@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">GatoPardoMoviles2</string>
+    <string name="title_activity_login">Iniciar Sesión</string>
+    <string name="user_login">Email</string>
+    <string name="password_login">Password</string>
+    <string name="button_login">Login</string>
+    <string name="title_activity_register">Registrarse</string>
+    <string name="user_register">Username</string>
+    <string name="email_register">Email</string>
+    <string name="password_register">Password</string>
+    <string name="checkBox">Acepto los Términos de Servicio y la Política de Privacidad"</string>
+    <string name="button_register">Register</string>
+    <string name="action_sign_in">¿No tienes una cuenta?</string>
+    <string name="action_sign_in1">Registrarse</string>
+    <string name="action_sign_register">¿Ya tienes una cuenta?</string>
+    <string name="action_sign_register1">Iniciar Sesión</string>
+    <string name="title_activity_panel">¡Hola Usuario!</string>
+    <string name="user_panel">Username</string>
+    <string name="email_panel">Email</string>
+    <string name="password_panel">Password</string>
+    <string name="button_panel">Ir a los talleres</string>
+    <string name="title_activity_workshops">Talleres</string>
+    <string name="search_workshops">Encuentra tu taller</string> <!-- Arreglado -->
+    <string name="text_workshops">Ir a la web para más información</string>
+    <string name="button_workshops">¡Separa tu cupo!</string> <!-- Arreglado -->
+    <string name="mensaje">¡Gracias por registrarse al curso!</string>
+    <string name="mensage0">En la web encontrará la información completa sobre todo lo que tienes que saber del curso.</string>
+    <string name="mensaje1">Volver al perfil</string>
+</resources>
