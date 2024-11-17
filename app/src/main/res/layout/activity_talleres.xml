@@ -53,12 +53,7 @@
             android:gravity="center"
             android:textAlignment="center" />
 
-        <!-- Imagen del taller -->
-        <ImageView
-            android:layout_width="400dp"
-            android:layout_height="250dp"
-            android:src="@drawable/taller"
-            android:layout_marginBottom="16dp" />
+
 
         <!-- Descripción del taller -->
         <TextView

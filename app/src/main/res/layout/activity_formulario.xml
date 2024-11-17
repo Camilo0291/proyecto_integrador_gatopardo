@@ -28,6 +28,7 @@
         <!-- Campos de entrada de texto -->
         <!-- Campos de entrada de texto -->
         <EditText
+            android:id="@+id/nameOne"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -39,6 +40,7 @@
             android:textColorHint="#FFFFFF" />
 
         <EditText
+            android:id="@+id/nameSecond"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -50,6 +52,7 @@
             android:textColorHint="#FFFFFF" />
 
         <EditText
+            android:id="@+id/surnameOne"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -61,6 +64,7 @@
             android:textColorHint="#FFFFFF" />
 
         <EditText
+            android:id="@+id/surnameSecond"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -72,6 +76,7 @@
             android:textColorHint="#FFFFFF" />
 
         <EditText
+            android:id="@+id/cc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -83,6 +88,7 @@
             android:textColorHint="#FFFFFF" />
 
         <EditText
+            android:id="@+id/documentType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -94,6 +100,7 @@
             android:textColorHint="#FFFFFF" />
 
         <EditText
+            android:id="@+id/emailFormulary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -105,6 +112,7 @@
             android:textColorHint="#FFFFFF" />
 
         <EditText
+            android:id="@+id/courseName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -116,6 +124,7 @@
             android:textColorHint="#FFFFFF" />
 
         <EditText
+            android:id="@+id/preferredSchedule"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
@@ -135,7 +144,7 @@
             android:layout_marginTop="16dp">
 
             <Button
-                android:id="@+id/enviarButton"
+                android:id="@+id/sendButton"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="Enviar"
@@ -149,7 +158,7 @@
                 android:layout_marginEnd="8dp" />
 
             <Button
-                android:id="@+id/finalizarButton"
+                android:id="@+id/endButton"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="Finalizar"

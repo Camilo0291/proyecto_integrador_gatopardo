@@ -33,7 +33,7 @@ public class talleres extends AppCompatActivity {
 
         // Listener para el primer botón (abrir URL)
         buttonWorkshops.setOnClickListener(view -> {
-            String url = "http://192.168.128.10:5173/";
+            String url = "https://buid-wpx4.vercel.app/";
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
             startActivity(intent);
         });
