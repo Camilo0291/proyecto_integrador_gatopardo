@@ -34,20 +34,20 @@ public class panel extends AppCompatActivity {
             String enteredPassword = password.getText().toString().trim();
 
             if (enteredEmail.isEmpty() || enteredPassword.isEmpty()) {
-                showToast("¡Por favor, complete todos los campos!", 4000);
+                showToast("Por favor, complete todos los campos.", 4000);
             } else {
                 // Verificar si los datos coinciden con un usuario en Firebase
                 auth.signInWithEmailAndPassword(enteredEmail, enteredPassword)
                         .addOnCompleteListener(this, task -> {
                             if (task.isSuccessful()) {
                                 // Si la autenticación es exitosa, limpiar los campos y navegar a talleres
-                                showToast("Inicio exitoso", 4000);
+                                showToast("¡Inicio exitoso!", 4000);
                                 clearFields(); // Limpiar los campos
                                 Intent intent = new Intent(panel.this, talleres.class);
                                 startActivity(intent);
                             } else {
                                 // Si los datos no coinciden, mostrar mensaje de error y limpiar los campos
-                                showToast("Correo o contraseña incorrectos", 4000);
+                                showToast("Correo o contraseña incorrectos.", 4000);
                                 clearFields();
                             }
                         });

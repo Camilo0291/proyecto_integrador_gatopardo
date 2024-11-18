@@ -73,7 +73,7 @@ public class login extends AppCompatActivity {
                                     finish();
                                 } else {
                                     if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
-                                        showToast("Los datos no coinciden", 4000);
+                                        showToast("Los datos no coinciden.", 4000);
                                     }
                                 }
                             }

@@ -2,21 +2,14 @@ package com.example.movilesgatopardo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.os.Handler;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -59,34 +52,31 @@ public class formulario extends AppCompatActivity {
             String mCourseName = courseName.getText().toString();
             String mPreferredSchedule = preferredSchedule.getText().toString();
 
-            if (checkData(mNameOne, mSurnameOne, mEmail)) {
-                Map<String, Object> userData = new HashMap<>();
-                userData.put("nameOne", mNameOne);
-                userData.put("nameSecond", mNameSecond);
-                userData.put("surnameOne", mSurnameOne);
-                userData.put("surnameSecond", mSurnameSecond);
-                userData.put("cc", mCC);
-                userData.put("documentType", mDocumentType);
-                userData.put("email", mEmail);
-                userData.put("courseName", mCourseName);
-                userData.put("preferredSchedule", mPreferredSchedule);
+            // Validación de los campos
+            if (checkData(mNameOne, mSurnameOne, mEmail, mCC)) {
+                Map<String, Object> formData = new HashMap<>();
+                formData.put("nameOne", mNameOne);
+                formData.put("nameSecond", mNameSecond);
+                formData.put("surnameOne", mSurnameOne);
+                formData.put("surnameSecond", mSurnameSecond);
+                formData.put("cc", mCC);
+                formData.put("documentType", mDocumentType);
+                formData.put("email", mEmail);
+                formData.put("courseName", mCourseName);
+                formData.put("preferredSchedule", mPreferredSchedule);
 
-                db.collection("users")
-                        .add(userData)
-                        .addOnSuccessListener(documentReference ->
-                                Toast.makeText(formulario.this,
-                                        "Registro exitoso. ID: " + documentReference.getId(),
-                                        Toast.LENGTH_LONG).show()
-                        )
+                // Guardar en la base de datos Firebase
+                db.collection("forms")
+                        .add(formData)
+                        .addOnSuccessListener(documentReference -> {
+                            showToast("¡Formulario enviado!. ID: " + documentReference.getId(), 4000);
+                            clearFields(); // Limpiar los campos después de un envío exitoso
+                        })
                         .addOnFailureListener(e ->
-                                Toast.makeText(formulario.this,
-                                        "Error al registrar. Inténtelo más tarde.",
-                                        Toast.LENGTH_LONG).show()
+                                showToast("Error al enviar. Intente más tarde.", 4000)
                         );
             } else {
-                Toast.makeText(formulario.this,
-                        "Debe diligenciar todos los datos obligatorios.",
-                        Toast.LENGTH_SHORT).show();
+                showToast("Complete todos los campos y valide los datos.", 4000);
             }
         });
 
@@ -98,7 +88,40 @@ public class formulario extends AppCompatActivity {
     }
 
     // Método para validar datos del formulario
-    private boolean checkData(String nameOne, String surnameOne, String email) {
-        return !nameOne.isEmpty() && !surnameOne.isEmpty() && !email.isEmpty();
+    private boolean checkData(String nameOne, String surnameOne, String email, String cc) {
+        return !nameOne.isEmpty() && !surnameOne.isEmpty() && !email.isEmpty() && !cc.isEmpty()
+                && isValidEmail(email) && isValidCC(cc);
+    }
+
+    // Método para validar el formato del correo electrónico
+    private boolean isValidEmail(String email) {
+        return email.matches("^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$");
+    }
+
+    // Método para validar la longitud del número de cédula
+    private boolean isValidCC(String cc) {
+        return cc.length() >= 8 && cc.length() <= 12 && cc.matches("[0-9]+");
+    }
+
+    // Método para limpiar los campos del formulario
+    private void clearFields() {
+        nameOne.setText("");
+        nameSecond.setText("");
+        surnameOne.setText("");
+        surnameSecond.setText("");
+        cc.setText("");
+        documentType.setText("");
+        emailFormulary.setText("");
+        courseName.setText("");
+        preferredSchedule.setText("");
+    }
+
+    // Método para mostrar Toast con duración extendida
+    private void showToast(String message, int duration) {
+        Toast toast = Toast.makeText(formulario.this, message, Toast.LENGTH_SHORT);
+        toast.show();
+
+        // Manejador para cancelar el Toast después de la duración especificada
+        new Handler().postDelayed(toast::cancel, duration);
     }
 }

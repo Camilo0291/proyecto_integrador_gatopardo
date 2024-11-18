@@ -67,26 +67,26 @@ public class register extends AppCompatActivity {
                             mAut.createUserWithEmailAndPassword(mEmail, mPassword)
                                     .addOnCompleteListener(task -> {
                                         if (task.isSuccessful()) {
-                                            showToast("Registro exitoso", 4000);
+                                            showToast("¡Registro exitoso!", 4000);
                                             finish();
                                             startActivity(new Intent(getApplicationContext(), talleres.class));
                                         } else {
                                             // Verificar si el error es debido a que el usuario ya existe
                                             if (task.getException() instanceof FirebaseAuthUserCollisionException) {
-                                                showToast("Este correo ya está registrado", 4000);
+                                                showToast("Este correo ya está registrado.", 4000);
                                             } else {
-                                                showToast("La contraseña debe tener al menos 6 dígitos", 4000);
+                                                showToast("La contraseña debe tener al menos 6 dígitos.", 4000);
                                             }
                                         }
                                     });
                         } else {
-                            showToast("Debes aceptar los términos para registrarte", 4000);
+                            showToast("Debes aceptar los términos para registrarte.", 4000);
                         }
                     } else {
-                        showToast("El correo debe tener el (@)", 4000);
+                        showToast("El correo debe tener el (@).", 4000);
                     }
                 } else {
-                    showToast("Por favor, complete todos los campos", 4000);
+                    showToast("Por favor, complete todos los campos.", 4000);
                 }
             }
         });
