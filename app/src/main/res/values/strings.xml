@@ -14,7 +14,7 @@
     <string name="action_sign_in1">Registrarse</string>
     <string name="action_sign_register">¿Ya tienes una cuenta?</string>
     <string name="action_sign_register1">Iniciar Sesión</string>
-    <string name="title_activity_panel">Bienvenid@</string>
+    <string name="title_activity_panel">¡Bienvenid@!</string>
     <string name="user_panel">Username</string>
     <string name="email_panel">Email</string>
     <string name="password_panel">Password</string>

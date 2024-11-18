@@ -18,7 +18,7 @@ public class formulario extends AppCompatActivity {
 
     // Declaración de campos del formulario
     EditText nameOne, nameSecond, surnameOne, surnameSecond, cc, documentType, emailFormulary, courseName, preferredSchedule;
-    Button endButton, sendButton;
+    Button sendAndNavigateButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,13 +35,12 @@ public class formulario extends AppCompatActivity {
         emailFormulary = findViewById(R.id.emailFormulary);
         courseName = findViewById(R.id.courseName);
         preferredSchedule = findViewById(R.id.preferredSchedule);
-        endButton = findViewById(R.id.endButton);
-        sendButton = findViewById(R.id.sendButton);
+        sendAndNavigateButton = findViewById(R.id.sendAndNavigateButton); // Botón único
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-        // Listener para guardar datos en Firebase
-        sendButton.setOnClickListener(v -> {
+        // Listener para el botón que envía los datos y navega a la siguiente actividad
+        sendAndNavigateButton.setOnClickListener(v -> {
             String mNameOne = nameOne.getText().toString();
             String mNameSecond = nameSecond.getText().toString();
             String mSurnameOne = surnameOne.getText().toString();
@@ -71,19 +70,17 @@ public class formulario extends AppCompatActivity {
                         .addOnSuccessListener(documentReference -> {
                             showToast("¡Formulario enviado!. ID: " + documentReference.getId(), 4000);
                             clearFields(); // Limpiar los campos después de un envío exitoso
+
+                            // Navegar a la siguiente actividad después de un envío exitoso
+                            Intent intent = new Intent(formulario.this, ultima.class);
+                            startActivity(intent);
                         })
                         .addOnFailureListener(e ->
                                 showToast("Error al enviar. Intente más tarde.", 4000)
                         );
             } else {
-                showToast("Complete todos los campos y valide los datos.", 4000);
+                showToast("Complete todos los campos para poder continuar.", 4000);
             }
-        });
-
-        // Listener para el segundo botón (ir a otra actividad)
-        endButton.setOnClickListener(view -> {
-            Intent intent = new Intent(formulario.this, ultima.class);
-            startActivity(intent);
         });
     }
 

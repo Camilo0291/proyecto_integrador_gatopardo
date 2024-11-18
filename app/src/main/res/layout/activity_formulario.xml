@@ -144,7 +144,7 @@
             android:layout_marginTop="16dp">
 
             <Button
-                android:id="@+id/sendButton"
+                android:id="@+id/sendAndNavigateButton"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="Enviar"
@@ -157,18 +157,7 @@
                 app:cornerRadius="8dp"
                 android:layout_marginEnd="8dp" />
 
-            <Button
-                android:id="@+id/endButton"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="Finalizar"
-                android:textSize="20sp"
-                android:backgroundTint="#FFFFFF"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:fontFamily="@font/andbasr"
-                android:padding="15dp"
-                app:cornerRadius="8dp" />
+
 
         </LinearLayout>
 
