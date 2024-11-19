@@ -2,17 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp"
     android:orientation="vertical"
     android:background="#003f54">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
     <LinearLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:padding="16dp"
-        android:id="@+id/main">
+        android:padding="16dp">
 
         <!-- Título principal -->
         <TextView
@@ -22,78 +28,325 @@
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:layout_marginBottom="1dp"
+            android:layout_marginBottom="16dp"
             android:fontFamily="@font/andbasr"
             android:gravity="center"
             android:textAlignment="center" />
 
-        <!-- Botón de búsqueda -->
-        <Button
+
+
+
+
+        <!-- Primer taller -->
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
-            android:text="@string/search_workshops"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/andbasr"
-            android:drawableLeft="@drawable/baseline_search_24"
-            android:drawablePadding="8dp"
-            android:padding="12dp" />
+            android:layout_height="wrap_content">
 
-        <!-- Título del taller -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Carvado de sellos"
-            android:textColor="#FFFFFF"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:textAlignment="center" />
+            <Button
+                android:id="@+id/showCardButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carvado de sellos"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@android:color/black"
+                android:padding="8dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/infoCard1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                app:cardCornerRadius="8dp"
+                android:backgroundTint="@color/white"
+                android:layout_below="@id/showCardButton1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/cardTitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Carvado de sellos"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/cardDescription1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardTitle1"
+                        android:layout_marginTop="8dp"
+                        android:text="Actividad creativa y manual que enseña las técnicas para diseñar, tallar y crear sellos personalizados a partir de materiales como goma o linóleo. ¡Anímate!"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/cardPrice1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardDescription1"
+                        android:layout_marginTop="8dp"
+                        android:text="Precio: $50.000"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/cardDuration1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardPrice1"
+                        android:layout_marginTop="8dp"
+                        android:text="Duración: 2 horas"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
 
 
+        </RelativeLayout>
 
-        <!-- Descripción del taller -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Únete a nuestro taller creativo y descubre el arte de diseñar y crear tus propios sellos personalizados. Durante este curso, aprenderás las técnicas básicas de grabado y estampado, explorando diferentes materiales y herramientas que te permitirán dar vida a tus ideas."
-            android:textColor="#D0D0D0"
-            android:textSize="16sp"
-            android:layout_marginBottom="10dp"
-            android:textAlignment="center"
-            android:gravity="center" />
+        <!-- Segundo taller -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <!-- Llamada a la acción -->
-        <Button
-            android:id="@+id/buttontoform"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="¡Separa tu cupo!"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:backgroundTint="@color/white"
-            android:fontFamily="@font/andbasr"
-            android:layout_marginBottom="10dp"
-            android:gravity="center"
-            android:textAlignment="center" />
+            <Button
+                android:id="@+id/showCardButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pintura en acuarela"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@android:color/black"
+                android:padding="8dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/infoCard2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                app:cardCornerRadius="8dp"
+                android:backgroundTint="@color/white"
+                android:layout_below="@id/showCardButton2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/cardTitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pintura en acuarela"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/cardDescription2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardTitle2"
+                        android:layout_marginTop="8dp"
+                        android:text="Aprende la técnica de la acuarela para crear obras de arte únicas con un estilo suave y fluido."
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/cardPrice2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardDescription2"
+                        android:layout_marginTop="8dp"
+                        android:text="Precio: $40.000"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/cardDuration2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardPrice2"
+                        android:layout_marginTop="8dp"
+                        android:text="Duración: 3 horas"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
 
 
+        </RelativeLayout>
+
+        <!-- Tercer taller -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/showCardButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fotografía básica"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@android:color/black"
+                android:padding="8dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/infoCard3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                app:cardCornerRadius="8dp"
+                android:backgroundTint="@color/white"
+                android:layout_below="@id/showCardButton3">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/cardTitle3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fotografía básica"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/cardDescription3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardTitle3"
+                        android:layout_marginTop="8dp"
+                        android:text="Introduce a los fundamentos de la fotografía, desde el manejo de la cámara hasta la composición de las imágenes."
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/cardPrice3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardDescription3"
+                        android:layout_marginTop="8dp"
+                        android:text="Precio: $30.000"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/cardDuration3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardPrice3"
+                        android:layout_marginTop="8dp"
+                        android:text="Duración: 4 horas"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+        <!-- Cuarto taller -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/showCardButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cerámica básica"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@android:color/black"
+                android:padding="8dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/infoCard4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                app:cardCornerRadius="8dp"
+                android:backgroundTint="@color/white"
+                android:layout_below="@id/showCardButton4">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/cardTitle4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cerámica básica"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/cardDescription4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardTitle4"
+                        android:layout_marginTop="8dp"
+                        android:text="Curso de cerámica para principiantes. Aprende a crear tus propias piezas con arcilla."
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/cardPrice4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardDescription4"
+                        android:layout_marginTop="8dp"
+                        android:text="Precio: $60.000"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/cardDuration4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardPrice4"
+                        android:layout_marginTop="8dp"
+                        android:text="Duración: 5 horas"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/buttontoform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¡Separa tu cupo!"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/andbasr"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/infoCard4"
+                android:gravity="center"
+                android:textAlignment="center" />
+        </RelativeLayout>
     </LinearLayout>
-
-    <!-- Botón de acción sin bordes -->
-    <Button
-        android:id="@+id/buttonWorkshops"
-        android:layout_gravity="center"
-        android:layout_width="260dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:textStyle="bold"
-        android:text="@string/text_workshops"
-        android:textColor="@color/black"
-        android:fontFamily="@font/andbasr"
-        android:padding="18dp" />
-
+    </ScrollView>
 </LinearLayout>
+

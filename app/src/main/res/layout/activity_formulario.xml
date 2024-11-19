@@ -76,18 +76,6 @@
             android:textColorHint="#FFFFFF" />
 
         <EditText
-            android:id="@+id/cc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:backgroundTint="#FFFFFF"
-            android:hint="Número de documento *"
-            android:inputType="number"
-            android:minHeight="48dp"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#FFFFFF" />
-
-        <EditText
             android:id="@+id/documentType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -95,6 +83,18 @@
             android:backgroundTint="#FFFFFF"
             android:hint="Tipo de documento"
             android:inputType="text"
+            android:minHeight="48dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/cc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#FFFFFF"
+            android:hint="Número de documento *"
+            android:inputType="number"
             android:minHeight="48dp"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
