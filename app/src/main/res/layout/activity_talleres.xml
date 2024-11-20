@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:text="@string/title_activity_workshops"
             android:textColor="#FFFFFF"
-            android:textSize="24sp"
+            android:textSize="44sp"
             android:textStyle="bold"
             android:layout_marginBottom="16dp"
             android:fontFamily="@font/andbasr"
@@ -46,7 +46,7 @@
                 android:id="@+id/showCardButton1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Carvado de sellos"
+                android:text="@string/title1"
                 android:layout_centerHorizontal="true"
                 android:textColor="@android:color/white"
                 android:backgroundTint="@android:color/black"
@@ -82,7 +82,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/cardTitle1"
                         android:layout_marginTop="8dp"
-                        android:text="Actividad creativa y manual que enseña las técnicas para diseñar, tallar y crear sellos personalizados a partir de materiales como goma o linóleo. ¡Anímate!"
+                        android:text="Actividad creativa y manual que enseña las técnicas para diseñar, tallar y crear sellos personalizados a partir de materiales como goma o linóleo."
                         android:textSize="16sp"
                         android:textColor="@android:color/black" />
 
@@ -92,7 +92,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/cardDescription1"
                         android:layout_marginTop="8dp"
-                        android:text="Precio: $50.000"
+                        android:text="Precio: $100.000"
                         android:textSize="16sp"
                         android:textColor="@android:color/black" />
 
@@ -105,6 +105,17 @@
                         android:text="Duración: 2 horas"
                         android:textSize="16sp"
                         android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/cardCupo1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardDuration1"
+                        android:layout_marginTop="8dp"
+                        android:text="Cupos: 155"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -121,7 +132,7 @@
                 android:id="@+id/showCardButton2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pintura en acuarela"
+                android:text="@string/title2"
                 android:layout_centerHorizontal="true"
                 android:textColor="@android:color/white"
                 android:backgroundTint="@android:color/black"
@@ -146,7 +157,7 @@
                         android:id="@+id/cardTitle2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pintura en acuarela"
+                        android:text="Estampado de tela"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         android:textColor="@android:color/black" />
@@ -157,7 +168,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/cardTitle2"
                         android:layout_marginTop="8dp"
-                        android:text="Aprende la técnica de la acuarela para crear obras de arte únicas con un estilo suave y fluido."
+                        android:text="Taller de estampado de tela. Aprende a crear diseños únicos y personalizar tus prendas utilizando técnicas de estampado."
                         android:textSize="16sp"
                         android:textColor="@android:color/black" />
 
@@ -167,7 +178,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/cardDescription2"
                         android:layout_marginTop="8dp"
-                        android:text="Precio: $40.000"
+                        android:text="Precio: $80.000"
                         android:textSize="16sp"
                         android:textColor="@android:color/black" />
 
@@ -177,9 +188,20 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/cardPrice2"
                         android:layout_marginTop="8dp"
-                        android:text="Duración: 3 horas"
+                        android:text="Duración: 1 hora"
                         android:textSize="16sp"
                         android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/cardCupo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardDuration2"
+                        android:layout_marginTop="8dp"
+                        android:text="Cupos: 20"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -195,7 +217,7 @@
                 android:id="@+id/showCardButton3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fotografía básica"
+                android:text="@string/title3"
                 android:layout_centerHorizontal="true"
                 android:textColor="@android:color/white"
                 android:backgroundTint="@android:color/black"
@@ -220,7 +242,7 @@
                         android:id="@+id/cardTitle3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Fotografía básica"
+                        android:text="Escultura en arcilla"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         android:textColor="@android:color/black" />
@@ -231,7 +253,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/cardTitle3"
                         android:layout_marginTop="8dp"
-                        android:text="Introduce a los fundamentos de la fotografía, desde el manejo de la cámara hasta la composición de las imágenes."
+                        android:text="Taller de escultura en arcilla. Descubre las técnicas para modelar y esculpir figuras únicas con tus manos y la arcilla."
                         android:textSize="16sp"
                         android:textColor="@android:color/black" />
 
@@ -241,7 +263,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/cardDescription3"
                         android:layout_marginTop="8dp"
-                        android:text="Precio: $30.000"
+                        android:text="Precio: $130.000"
                         android:textSize="16sp"
                         android:textColor="@android:color/black" />
 
@@ -251,9 +273,20 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/cardPrice3"
                         android:layout_marginTop="8dp"
-                        android:text="Duración: 4 horas"
+                        android:text="Duración: 3 horas"
                         android:textSize="16sp"
                         android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/cardCupo3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardDuration3"
+                        android:layout_marginTop="8dp"
+                        android:text="Cupos: 15"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -269,7 +302,7 @@
                 android:id="@+id/showCardButton4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cerámica básica"
+                android:text="@string/title4"
                 android:layout_centerHorizontal="true"
                 android:textColor="@android:color/white"
                 android:backgroundTint="@android:color/black"
@@ -294,7 +327,7 @@
                         android:id="@+id/cardTitle4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Cerámica básica"
+                        android:text="Bordado"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         android:textColor="@android:color/black" />
@@ -305,7 +338,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/cardTitle4"
                         android:layout_marginTop="8dp"
-                        android:text="Curso de cerámica para principiantes. Aprende a crear tus propias piezas con arcilla."
+                        android:text="Curso de bordado para principiantes. Aprende a crear hermosos diseños y bordar tus propias obras de arte sobre tela."
                         android:textSize="16sp"
                         android:textColor="@android:color/black" />
 
@@ -315,7 +348,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/cardDescription4"
                         android:layout_marginTop="8dp"
-                        android:text="Precio: $60.000"
+                        android:text="Precio: $70.000"
                         android:textSize="16sp"
                         android:textColor="@android:color/black" />
 
@@ -325,9 +358,20 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/cardPrice4"
                         android:layout_marginTop="8dp"
-                        android:text="Duración: 5 horas"
+                        android:text="Duración: 2 horas"
                         android:textSize="16sp"
                         android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/cardCupo4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardDuration4"
+                        android:layout_marginTop="8dp"
+                        android:text="Cupos: 20"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
