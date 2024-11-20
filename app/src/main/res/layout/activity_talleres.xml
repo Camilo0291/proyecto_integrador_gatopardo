@@ -48,8 +48,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/title1"
                 android:layout_centerHorizontal="true"
-                android:textColor="@android:color/white"
-                android:backgroundTint="@android:color/black"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+
+                android:backgroundTint="@android:color/white"
                 android:padding="8dp" />
 
             <androidx.cardview.widget.CardView
@@ -58,6 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:visibility="gone"
+
                 app:cardCornerRadius="8dp"
                 android:backgroundTint="@color/white"
                 android:layout_below="@id/showCardButton1">
@@ -74,7 +77,7 @@
                         android:text="Carvado de sellos"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@color/blue" />
 
                     <TextView
                         android:id="@+id/cardDescription1"
@@ -84,7 +87,7 @@
                         android:layout_marginTop="8dp"
                         android:text="Actividad creativa y manual que enseña las técnicas para diseñar, tallar y crear sellos personalizados a partir de materiales como goma o linóleo."
                         android:textSize="16sp"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@color/blue" />
 
                     <TextView
                         android:id="@+id/cardPrice1"
@@ -94,7 +97,7 @@
                         android:layout_marginTop="8dp"
                         android:text="Precio: $100.000"
                         android:textSize="16sp"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@color/blue" />
 
                     <TextView
                         android:id="@+id/cardDuration1"
@@ -104,7 +107,7 @@
                         android:layout_marginTop="8dp"
                         android:text="Duración: 2 horas"
                         android:textSize="16sp"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@color/blue" />
 
                     <TextView
                         android:id="@+id/cardCupo1"
@@ -112,9 +115,9 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/cardDuration1"
                         android:layout_marginTop="8dp"
-                        android:text="Cupos: 155"
+                        android:text="Cupos: 15"
                         android:textSize="16sp"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@color/blue" />
 
 
                 </RelativeLayout>
@@ -134,8 +137,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/title2"
                 android:layout_centerHorizontal="true"
-                android:textColor="@android:color/white"
-                android:backgroundTint="@android:color/black"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:backgroundTint="@color/white"
                 android:padding="8dp" />
 
             <androidx.cardview.widget.CardView
@@ -143,8 +147,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:visibility="gone"
                 app:cardCornerRadius="8dp"
+                android:visibility="gone"
                 android:backgroundTint="@color/white"
                 android:layout_below="@id/showCardButton2">
 
@@ -160,7 +164,7 @@
                         android:text="Estampado de tela"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@color/blue" />
 
                     <TextView
                         android:id="@+id/cardDescription2"
@@ -170,7 +174,7 @@
                         android:layout_marginTop="8dp"
                         android:text="Taller de estampado de tela. Aprende a crear diseños únicos y personalizar tus prendas utilizando técnicas de estampado."
                         android:textSize="16sp"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@color/blue" />
 
                     <TextView
                         android:id="@+id/cardPrice2"
@@ -180,7 +184,7 @@
                         android:layout_marginTop="8dp"
                         android:text="Precio: $80.000"
                         android:textSize="16sp"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@color/blue" />
 
                     <TextView
                         android:id="@+id/cardDuration2"
@@ -190,7 +194,7 @@
                         android:layout_marginTop="8dp"
                         android:text="Duración: 1 hora"
                         android:textSize="16sp"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@color/blue" />
 
                     <TextView
                         android:id="@+id/cardCupo2"
@@ -200,7 +204,7 @@
                         android:layout_marginTop="8dp"
                         android:text="Cupos: 20"
                         android:textSize="16sp"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@color/blue" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -219,8 +223,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/title3"
                 android:layout_centerHorizontal="true"
-                android:textColor="@android:color/white"
-                android:backgroundTint="@android:color/black"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:backgroundTint="@android:color/white"
                 android:padding="8dp" />
 
             <androidx.cardview.widget.CardView
@@ -245,7 +250,7 @@
                         android:text="Escultura en arcilla"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@color/blue" />
 
                     <TextView
                         android:id="@+id/cardDescription3"
@@ -255,7 +260,7 @@
                         android:layout_marginTop="8dp"
                         android:text="Taller de escultura en arcilla. Descubre las técnicas para modelar y esculpir figuras únicas con tus manos y la arcilla."
                         android:textSize="16sp"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@color/blue" />
 
                     <TextView
                         android:id="@+id/cardPrice3"
@@ -265,7 +270,7 @@
                         android:layout_marginTop="8dp"
                         android:text="Precio: $130.000"
                         android:textSize="16sp"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@color/blue" />
 
                     <TextView
                         android:id="@+id/cardDuration3"
@@ -275,7 +280,7 @@
                         android:layout_marginTop="8dp"
                         android:text="Duración: 3 horas"
                         android:textSize="16sp"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@color/blue" />
 
                     <TextView
                         android:id="@+id/cardCupo3"
@@ -285,7 +290,7 @@
                         android:layout_marginTop="8dp"
                         android:text="Cupos: 15"
                         android:textSize="16sp"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@color/blue" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -300,13 +305,14 @@
 
             <Button
                 android:id="@+id/showCardButton4"
-                android:layout_width="wrap_content"
+                android:layout_width="142dp"
                 android:layout_height="wrap_content"
-                android:text="@string/title4"
                 android:layout_centerHorizontal="true"
-                android:textColor="@android:color/white"
-                android:backgroundTint="@android:color/black"
-                android:padding="8dp" />
+                android:backgroundTint="@android:color/white"
+                android:padding="8dp"
+                android:text="@string/title4"
+                android:textStyle="bold"
+                android:textColor="@color/blue" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/infoCard4"
@@ -330,7 +336,7 @@
                         android:text="Bordado"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@color/blue" />
 
                     <TextView
                         android:id="@+id/cardDescription4"
@@ -340,7 +346,7 @@
                         android:layout_marginTop="8dp"
                         android:text="Curso de bordado para principiantes. Aprende a crear hermosos diseños y bordar tus propias obras de arte sobre tela."
                         android:textSize="16sp"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@color/blue" />
 
                     <TextView
                         android:id="@+id/cardPrice4"
@@ -350,7 +356,7 @@
                         android:layout_marginTop="8dp"
                         android:text="Precio: $70.000"
                         android:textSize="16sp"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@color/blue" />
 
                     <TextView
                         android:id="@+id/cardDuration4"
@@ -360,7 +366,7 @@
                         android:layout_marginTop="8dp"
                         android:text="Duración: 2 horas"
                         android:textSize="16sp"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@color/blue" />
 
                     <TextView
                         android:id="@+id/cardCupo4"
@@ -370,7 +376,7 @@
                         android:layout_marginTop="8dp"
                         android:text="Cupos: 20"
                         android:textSize="16sp"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@color/blue" />
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -380,7 +386,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="¡Separa tu cupo!"
-                android:textColor="@color/black"
+                android:textColor="@color/blue"
                 android:textStyle="bold"
                 android:backgroundTint="@color/white"
                 android:fontFamily="@font/andbasr"
