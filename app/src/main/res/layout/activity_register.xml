@@ -37,23 +37,21 @@
                 android:textStyle="bold"
                 android:textColor="@color/blue"/>
 
-
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:id="@+id/etEmailR"
-                android:fontFamily="@font/executive"
+                android:fontFamily="@font/andbasr"
                 android:hint="@string/email_register"
                 android:padding="8dp"
                 android:layout_marginTop="40dp"
-                android:backgroundTint="@android:color/black"
-                />
+                android:backgroundTint="@android:color/black" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:id="@+id/etPasswordR"
-                android:fontFamily="@font/executive"
+                android:fontFamily="@font/andbasr"
                 android:drawablePadding="8dp"
                 android:hint="@string/password_register"
                 android:padding="8dp"
@@ -67,9 +65,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/checkBox"
                 android:textStyle="bold"
-                android:fontFamily="@font/andbasr"
-                android:layout_margin="20dp"
-                />
+                android:fontFamily="@font/executive"
+                android:layout_margin="20dp" />
 
             <Button
                 android:layout_width="match_parent"

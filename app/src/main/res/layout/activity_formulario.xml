@@ -12,21 +12,18 @@
         android:gravity="center"
         android:id="@+id/main">
 
-        <!-- Título del formulario -->
         <TextView
             android:id="@+id/registroTitulo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Regístrate al curso"
-            android:textSize="30sp"
-            android:fontFamily="@font/andbasr"
+            android:textSize="35sp"
+            android:fontFamily="@font/executive"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:gravity="center"
             android:layout_marginBottom="16dp" />
 
-        <!-- Campos de entrada de texto -->
-        <!-- Campos de entrada de texto -->
         <EditText
             android:id="@+id/nameOne"
             android:layout_width="match_parent"
@@ -36,6 +33,7 @@
             android:hint="@string/first_name"
             android:inputType="textPersonName"
             android:minHeight="48dp"
+            android:fontFamily="@font/andbasr"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
 
@@ -47,6 +45,7 @@
             android:backgroundTint="#FFFFFF"
             android:hint="@string/middle_name"
             android:inputType="textPersonName"
+            android:fontFamily="@font/andbasr"
             android:minHeight="48dp"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
@@ -59,6 +58,7 @@
             android:backgroundTint="#FFFFFF"
             android:hint="@string/first_surname"
             android:inputType="textPersonName"
+            android:fontFamily="@font/andbasr"
             android:minHeight="48dp"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
@@ -71,6 +71,7 @@
             android:backgroundTint="#FFFFFF"
             android:hint="@string/second_last_name"
             android:inputType="textPersonName"
+            android:fontFamily="@font/andbasr"
             android:minHeight="48dp"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
@@ -84,6 +85,7 @@
             android:hint="@string/document_type"
             android:inputType="text"
             android:minHeight="48dp"
+            android:fontFamily="@font/andbasr"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
 
@@ -96,6 +98,7 @@
             android:hint="@string/document_number"
             android:inputType="number"
             android:minHeight="48dp"
+            android:fontFamily="@font/andbasr"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
 
@@ -107,6 +110,7 @@
             android:backgroundTint="#FFFFFF"
             android:hint="@string/email_form"
             android:inputType="textEmailAddress"
+            android:fontFamily="@font/andbasr"
             android:minHeight="48dp"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
@@ -117,9 +121,10 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:backgroundTint="#FFFFFF"
-            android:hint="Nombre del curso*"
+            android:hint="@string/course_name"
             android:inputType="text"
             android:minHeight="48dp"
+            android:fontFamily="@font/andbasr"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
 
@@ -132,16 +137,16 @@
             android:hint="@string/preferred_schedule"
             android:inputType="text"
             android:minHeight="48dp"
+            android:fontFamily="@font/andbasr"
             android:textColor="#FFFFFF"
             android:textColorHint="#FFFFFF" />
 
-        <!-- Botones de Enviar y Finalizar alineados horizontalmente -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="10dp">
 
             <Button
                 android:id="@+id/sendAndNavigateButton"
@@ -150,16 +155,15 @@
                 android:text="@string/button_send"
                 android:textSize="20sp"
                 android:backgroundTint="#FFFFFF"
-                android:textColor="@color/black"
+                android:textColor="@color/blue"
                 android:textStyle="bold"
                 android:fontFamily="@font/andbasr"
-                android:padding="15dp"
+                android:padding="10dp"
                 app:cornerRadius="8dp"
                 android:layout_marginEnd="8dp" />
-
-
 
         </LinearLayout>
 
     </LinearLayout>
+
 </ScrollView>

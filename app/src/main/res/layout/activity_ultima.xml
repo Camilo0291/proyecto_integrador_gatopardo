@@ -8,17 +8,13 @@
     android:background="#004F5A"
     android:id="@+id/main">
 
-
-    <!-- Imagen de Logo -->
     <ImageView
         android:id="@+id/logoImage"
         android:layout_gravity="center"
         android:layout_width="350dp"
         android:layout_height="300dp"
-        android:src="@drawable/logitogatopardo02"
-        />
+        android:src="@drawable/logitogatopardo02" />
 
-    <!-- Mensaje Principal -->
     <TextView
         android:id="@+id/graciasMensaje"
         android:layout_width="wrap_content"
@@ -27,10 +23,10 @@
         android:text="@string/mensaje"
         android:textSize="44sp"
         android:textColor="#FFFFFF"
+        android:fontFamily="@font/executive"
         android:textStyle="bold"
         android:gravity="center" />
 
-    <!-- Mensaje Secundario -->
     <TextView
         android:id="@+id/infoMensaje"
         android:layout_width="wrap_content"
@@ -42,7 +38,6 @@
         android:fontFamily="@font/executive"
         android:gravity="center" />
 
-    <!-- Botón de Volver -->
     <Button
         android:id="@+id/volverButton"
         android:layout_width="wrap_content"
