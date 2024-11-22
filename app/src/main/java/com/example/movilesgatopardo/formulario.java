@@ -6,11 +6,8 @@ import android.os.Handler;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.firebase.firestore.FirebaseFirestore;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -68,7 +65,7 @@ public class formulario extends AppCompatActivity {
                 db.collection("forms")
                         .add(formData)
                         .addOnSuccessListener(documentReference -> {
-                            showToast("¡Formulario enviado!. ID: " + documentReference.getId(), 4000);
+                            showToast("¡Formulario enviado!. ID: " + documentReference.getId(), 8000);
                             clearFields(); // Limpiar los campos después de un envío exitoso
 
                             // Navegar a la siguiente actividad después de un envío exitoso
@@ -76,10 +73,10 @@ public class formulario extends AppCompatActivity {
                             startActivity(intent);
                         })
                         .addOnFailureListener(e ->
-                                showToast("Error al enviar. Intente más tarde.", 4000)
+                                showToast("Error al enviar. Intente más tarde.", 8000)
                         );
             } else {
-                showToast("Complete todos los campos para poder continuar.", 4000);
+                showToast("Complete y valide todos los campos para poder continuar.", 8000);
             }
         });
     }

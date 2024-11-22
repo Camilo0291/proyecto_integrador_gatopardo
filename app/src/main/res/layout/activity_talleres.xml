@@ -13,387 +13,386 @@
         android:layout_height="match_parent"
         android:fillViewport="true">
 
-    <LinearLayout
-        android:id="@+id/main"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="16dp">
-
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/title_activity_workshops"
-            android:textColor="#FFFFFF"
-            android:textSize="44sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp"
-            android:fontFamily="@font/andbasr"
+            android:orientation="vertical"
             android:gravity="center"
-            android:textAlignment="center" />
+            android:padding="16dp">
 
-
-        <!-- Primer taller -->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/showCardButton1"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/title1"
-                android:layout_centerHorizontal="true"
-                android:textColor="@color/blue"
+                android:text="@string/title_activity_workshops"
+                android:textColor="#FFFFFF"
+                android:textSize="44sp"
                 android:textStyle="bold"
+                android:layout_marginBottom="16dp"
                 android:fontFamily="@font/andbasr"
-                android:backgroundTint="@android:color/white"
-                android:padding="8dp" />
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/infoCard1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:visibility="gone"
-
-                app:cardCornerRadius="8dp"
-                android:backgroundTint="@color/white"
-                android:layout_below="@id/showCardButton1">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:id="@+id/cardTitle1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/title1"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/blue" />
-
-                    <TextView
-                        android:id="@+id/cardDescription1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cardTitle1"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/description1"
-                        android:textSize="16sp"
-                        android:textColor="@color/blue" />
-
-                    <TextView
-                        android:id="@+id/cardPrice1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cardDescription1"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/price1"
-                        android:textSize="16sp"
-                        android:textColor="@color/blue" />
-
-                    <TextView
-                        android:id="@+id/cardDuration1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cardPrice1"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/duration1"
-                        android:textSize="16sp"
-                        android:textColor="@color/blue" />
-
-                    <TextView
-                        android:id="@+id/cardCupo1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cardDuration1"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/cupo1"
-                        android:textSize="16sp"
-                        android:textColor="@color/blue" />
-
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-        </RelativeLayout>
-
-        <!-- Segundo taller -->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/showCardButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/title2"
-                android:layout_centerHorizontal="true"
-                android:textColor="@color/blue"
-                android:textStyle="bold"
-                android:fontFamily="@font/andbasr"
-                android:backgroundTint="@color/white"
-                android:padding="8dp" />
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/infoCard2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:cardCornerRadius="8dp"
-                android:visibility="gone"
-                android:backgroundTint="@color/white"
-                android:layout_below="@id/showCardButton2">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:id="@+id/cardTitle2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/title2"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/blue" />
-
-                    <TextView
-                        android:id="@+id/cardDescription2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cardTitle2"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/description2"
-                        android:textSize="16sp"
-                        android:textColor="@color/blue" />
-
-                    <TextView
-                        android:id="@+id/cardPrice2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cardDescription2"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/price2"
-                        android:textSize="16sp"
-                        android:textColor="@color/blue" />
-
-                    <TextView
-                        android:id="@+id/cardDuration2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cardPrice2"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/duration2"
-                        android:textSize="16sp"
-                        android:textColor="@color/blue" />
-
-                    <TextView
-                        android:id="@+id/cardCupo2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cardDuration2"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/cupo2"
-                        android:textSize="16sp"
-                        android:textColor="@color/blue" />
-
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-        </RelativeLayout>
-
-        <!-- Tercer taller -->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/showCardButton3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/title3"
-                android:layout_centerHorizontal="true"
-                android:textColor="@color/blue"
-                android:textStyle="bold"
-                android:fontFamily="@font/andbasr"
-                android:backgroundTint="@android:color/white"
-                android:padding="8dp" />
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/infoCard3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:visibility="gone"
-                app:cardCornerRadius="8dp"
-                android:backgroundTint="@color/white"
-                android:layout_below="@id/showCardButton3">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:id="@+id/cardTitle3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/title3"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/blue" />
-
-                    <TextView
-                        android:id="@+id/cardDescription3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cardTitle3"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/description3"
-                        android:textSize="16sp"
-                        android:textColor="@color/blue" />
-
-                    <TextView
-                        android:id="@+id/cardPrice3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cardDescription3"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/price3"
-                        android:textSize="16sp"
-                        android:textColor="@color/blue" />
-
-                    <TextView
-                        android:id="@+id/cardDuration3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cardPrice3"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/duration3"
-                        android:textSize="16sp"
-                        android:textColor="@color/blue" />
-
-                    <TextView
-                        android:id="@+id/cardCupo3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cardDuration3"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/cupo3"
-                        android:textSize="16sp"
-                        android:textColor="@color/blue" />
-
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-        </RelativeLayout>
-
-        <!-- Cuarto taller -->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/showCardButton4"
-                android:layout_width="142dp"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:backgroundTint="@android:color/white"
-                android:padding="8dp"
-                android:text="@string/title4"
-                android:textStyle="bold"
-                android:fontFamily="@font/andbasr"
-                android:textColor="@color/blue" />
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/infoCard4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:visibility="gone"
-                app:cardCornerRadius="8dp"
-                android:backgroundTint="@color/white"
-                android:layout_below="@id/showCardButton4">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:id="@+id/cardTitle4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/title4"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/blue" />
-
-                    <TextView
-                        android:id="@+id/cardDescription4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cardTitle4"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/description4"
-                        android:textSize="16sp"
-                        android:textColor="@color/blue" />
-
-                    <TextView
-                        android:id="@+id/cardPrice4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cardDescription4"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/price4"
-                        android:textColor="@color/blue"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/cardDuration4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cardPrice4"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/duration4"
-                        android:textSize="16sp"
-                        android:textColor="@color/blue" />
-
-                    <TextView
-                        android:id="@+id/cardCupo4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cardDuration4"
-                        android:layout_marginTop="8dp"
-                        android:text="@string/cupo4"
-                        android:textSize="16sp"
-                        android:textColor="@color/blue" />
-
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
-
-            <Button
-                android:id="@+id/buttontoform"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/button_workshop"
-                android:textColor="@color/blue"
-                android:textStyle="bold"
-                android:backgroundTint="@color/white"
-                android:fontFamily="@font/andbasr"
-                android:layout_marginTop="16dp"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/infoCard4"
                 android:gravity="center"
                 android:textAlignment="center" />
 
-        </RelativeLayout>
 
-    </LinearLayout>
+            <!-- Primer taller -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/showCardButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title1"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/andbasr"
+                    android:backgroundTint="@android:color/white"
+                    android:padding="8dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/infoCard1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+
+                    app:cardCornerRadius="8dp"
+                    android:backgroundTint="@color/white"
+                    android:layout_below="@id/showCardButton1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/cardTitle1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title1"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/blue" />
+
+                        <TextView
+                            android:id="@+id/cardDescription1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cardTitle1"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/description1"
+                            android:textSize="16sp"
+                            android:textColor="@color/blue" />
+
+                        <TextView
+                            android:id="@+id/cardPrice1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cardDescription1"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/price1"
+                            android:textSize="16sp"
+                            android:textColor="@color/blue" />
+
+                        <TextView
+                            android:id="@+id/cardDuration1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cardPrice1"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/duration1"
+                            android:textSize="16sp"
+                            android:textColor="@color/blue" />
+
+                        <TextView
+                            android:id="@+id/cardCupo1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cardDuration1"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/cupo1"
+                            android:textSize="16sp"
+                            android:textColor="@color/blue" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <!-- Segundo taller -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/showCardButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title2"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/andbasr"
+                    android:backgroundTint="@color/white"
+                    android:padding="8dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/infoCard2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="8dp"
+                    android:visibility="gone"
+                    android:backgroundTint="@color/white"
+                    android:layout_below="@id/showCardButton2">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/cardTitle2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title2"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/blue" />
+
+                        <TextView
+                            android:id="@+id/cardDescription2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cardTitle2"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/description2"
+                            android:textSize="16sp"
+                            android:textColor="@color/blue" />
+
+                        <TextView
+                            android:id="@+id/cardPrice2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cardDescription2"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/price2"
+                            android:textSize="16sp"
+                            android:textColor="@color/blue" />
+
+                        <TextView
+                            android:id="@+id/cardDuration2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cardPrice2"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/duration2"
+                            android:textSize="16sp"
+                            android:textColor="@color/blue" />
+
+                        <TextView
+                            android:id="@+id/cardCupo2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cardDuration2"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/cupo2"
+                            android:textSize="16sp"
+                            android:textColor="@color/blue" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <!-- Tercer taller -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/showCardButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title3"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/andbasr"
+                    android:backgroundTint="@android:color/white"
+                    android:padding="8dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/infoCard3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="8dp"
+                    android:backgroundTint="@color/white"
+                    android:layout_below="@id/showCardButton3">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/cardTitle3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title3"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/blue" />
+
+                        <TextView
+                            android:id="@+id/cardDescription3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cardTitle3"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/description3"
+                            android:textSize="16sp"
+                            android:textColor="@color/blue" />
+
+                        <TextView
+                            android:id="@+id/cardPrice3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cardDescription3"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/price3"
+                            android:textSize="16sp"
+                            android:textColor="@color/blue" />
+
+                        <TextView
+                            android:id="@+id/cardDuration3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cardPrice3"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/duration3"
+                            android:textSize="16sp"
+                            android:textColor="@color/blue" />
+
+                        <TextView
+                            android:id="@+id/cardCupo3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cardDuration3"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/cupo3"
+                            android:textSize="16sp"
+                            android:textColor="@color/blue" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+            <!-- Cuarto taller -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/showCardButton4"
+                    android:layout_width="142dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="@android:color/white"
+                    android:padding="8dp"
+                    android:text="@string/title4"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/andbasr"
+                    android:textColor="@color/blue" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/infoCard4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="8dp"
+                    android:backgroundTint="@color/white"
+                    android:layout_below="@id/showCardButton4">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:id="@+id/cardTitle4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title4"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/blue" />
+
+                        <TextView
+                            android:id="@+id/cardDescription4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cardTitle4"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/description4"
+                            android:textSize="16sp"
+                            android:textColor="@color/blue" />
+
+                        <TextView
+                            android:id="@+id/cardPrice4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cardDescription4"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/price4"
+                            android:textColor="@color/blue"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/cardDuration4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cardPrice4"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/duration4"
+                            android:textSize="16sp"
+                            android:textColor="@color/blue" />
+
+                        <TextView
+                            android:id="@+id/cardCupo4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cardDuration4"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/cupo4"
+                            android:textSize="16sp"
+                            android:textColor="@color/blue" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/buttontoform"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_workshop"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/andbasr"
+                    android:layout_marginTop="16dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/infoCard4"
+                    android:gravity="center"
+                    android:textAlignment="center" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
 
     </ScrollView>
 
 </LinearLayout>
-

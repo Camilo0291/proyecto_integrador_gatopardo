@@ -57,7 +57,7 @@ public class login extends AppCompatActivity {
 
                 // Verificar que los campos no estén vacíos
                 if (mEmail.isEmpty() || mPassword.isEmpty()) {
-                    showToast("Por favor, complete todos los campos.", 4000);
+                    showToast("Por favor, complete todos los campos.", 8000);
                     return;
                 }
 
@@ -67,13 +67,13 @@ public class login extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    showToast("¡Inicio de sesión exitoso!", 4000);
+                                    showToast("¡Inicio de sesión exitoso!", 8000);
                                     Intent intent = new Intent(login.this, panel.class);
                                     startActivity(intent);
                                     finish();
                                 } else {
                                     if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
-                                        showToast("Los datos no coinciden.", 4000);
+                                        showToast("Los datos no coinciden.", 8000);
                                     }
                                 }
                             }

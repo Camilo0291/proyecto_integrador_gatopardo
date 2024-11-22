@@ -9,15 +9,12 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
-
 import java.util.regex.Pattern;
 
 public class register extends AppCompatActivity {
@@ -36,7 +33,6 @@ public class register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -67,26 +63,26 @@ public class register extends AppCompatActivity {
                             mAut.createUserWithEmailAndPassword(mEmail, mPassword)
                                     .addOnCompleteListener(task -> {
                                         if (task.isSuccessful()) {
-                                            showToast("¡Registro exitoso!", 4000);
+                                            showToast("¡Registro exitoso!", 8000);
                                             finish();
                                             startActivity(new Intent(getApplicationContext(), talleres.class));
                                         } else {
                                             // Verificar si el error es debido a que el usuario ya existe
                                             if (task.getException() instanceof FirebaseAuthUserCollisionException) {
-                                                showToast("Este correo ya está registrado.", 4000);
+                                                showToast("Este correo ya está registrado.", 8000);
                                             } else {
-                                                showToast("La contraseña debe tener al menos 6 dígitos.", 4000);
+                                                showToast("La contraseña debe tener al menos 6 dígitos.", 8000);
                                             }
                                         }
                                     });
                         } else {
-                            showToast("Debes aceptar los términos para registrarte.", 4000);
+                            showToast("Debes aceptar los términos y condiciones para registrarte.", 8000);
                         }
                     } else {
-                        showToast("El correo debe tener el (@).", 4000);
+                        showToast("El correo debe tener el (@).", 8000);
                     }
                 } else {
-                    showToast("Por favor, complete todos los campos.", 4000);
+                    showToast("Por favor, complete todos los campos.", 8000);
                 }
             }
         });

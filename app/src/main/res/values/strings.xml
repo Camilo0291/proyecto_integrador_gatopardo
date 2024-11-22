@@ -54,7 +54,7 @@
     <string name="cupo4">15 cupos</string>
 
     <string name="button_workshop">¡Separa tu cupo!</string>
-    <string name="mensaje">¡Gracias por registrarse al curso!</string>
-    <string name="mensage0">En la web encontrará la información completa sobre todo lo que tienes que saber del curso.</string>
-    <string name="mensaje1">Volver al perfil</string>
+    <string name="message">¡Gracias por registrarse al curso!</string>
+    <string name="message1">En la web encontrará la información completa sobre todo lo que tienes que saber del curso.</string>
+    <string name="message2">Volver al perfil</string>
 </resources>

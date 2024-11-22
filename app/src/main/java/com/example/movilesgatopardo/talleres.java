@@ -12,7 +12,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class talleres extends AppCompatActivity {
 
-    // Declare all buttons and CardViews for each workshop
+    // Declarar todos los botones y las CardViews para cada taller
     Button buttontoform;
     Button showCardButton1, showCardButton2, showCardButton3, showCardButton4;
     CardView infoCard1, infoCard2, infoCard3, infoCard4;
@@ -29,9 +29,8 @@ public class talleres extends AppCompatActivity {
             return insets;
         });
 
-        // Initialize all buttons and CardViews
+        // Inicializar todos los botones y las CardViews
         buttontoform = findViewById(R.id.buttontoform);
-
 
         showCardButton1 = findViewById(R.id.showCardButton1);
         showCardButton2 = findViewById(R.id.showCardButton2);
@@ -43,33 +42,32 @@ public class talleres extends AppCompatActivity {
         infoCard3 = findViewById(R.id.infoCard3);
         infoCard4 = findViewById(R.id.infoCard4);
 
-        // Set visibility of the cards to GONE by default
+        // Configurar la visibilidad de las CardViews como GONE por defecto
         infoCard1.setVisibility(View.GONE);
         infoCard2.setVisibility(View.GONE);
         infoCard3.setVisibility(View.GONE);
         infoCard4.setVisibility(View.GONE);
 
-        // Set onClickListeners for each showCardButton to toggle visibility
+        // Asignar OnClickListeners para cada botón de tarjeta para alternar visibilidad
         showCardButton1.setOnClickListener(v -> toggleCard(infoCard1));
         showCardButton2.setOnClickListener(v -> toggleCard(infoCard2));
         showCardButton3.setOnClickListener(v -> toggleCard(infoCard3));
         showCardButton4.setOnClickListener(v -> toggleCard(infoCard4));
 
-        // Set onClickListeners for each form button to navigate to the form activity
+        // Asignar OnClickListener para el botón del formulario y navegar a la actividad del formulario
         buttontoform.setOnClickListener(v -> openFormActivity());
-
     }
 
-    // Method to toggle visibility of a CardView
+    // Método para alternar la visibilidad de una CardView
     private void toggleCard(CardView card) {
         if (card.getVisibility() == View.GONE) {
-            card.setVisibility(View.VISIBLE); // Show the card
+            card.setVisibility(View.VISIBLE);
         } else {
-            card.setVisibility(View.GONE); // Hide the card
+            card.setVisibility(View.GONE);
         }
     }
 
-    // Method to open the form activity
+    // Método para abrir la actividad del formulario
     private void openFormActivity() {
         Intent intent = new Intent(talleres.this, formulario.class);
         startActivity(intent);
