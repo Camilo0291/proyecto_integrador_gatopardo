@@ -80,11 +80,11 @@ git clone https://github.com/Camilo0291/proyecto_integrador_gatopardo.git
 <h2 align="left">Equipo de Desarrollo</h2>
 
 ###
-* *[Carlos Sánchez](https://github.com/CASanchezc5)*: colaborador
-* *[Mariana Garzon](https://github.com/marigarzon)*: colaborador
 * *[Camilo Quintana](https://github.com/Camilo0291)*: colaborador
-* *[Alejandra Tamayo](https://github.com/thaleja)*: colaborador
 * *[Edison Martinez](https://github.com/Edisonmo30)*: colaborador
+* *[Mariana Garzon](https://github.com/marigarzon)*: colaborador
+* *[Alejandra Tamayo](https://github.com/thaleja)*: colaborador
+* *[Carlos Sánchez](https://github.com/CASanchezc5)*: colaborador
 ###
 
 </p>

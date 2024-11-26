@@ -1,17 +1,38 @@
 package services;
 
+import com.google.gson.annotations.SerializedName;
+
 public class UserForm {
+
+    @SerializedName("Primer_Nombre")
     private String nameOne;
+
+    @SerializedName("Segundo_Nombre")
     private String nameSecond;
+
+    @SerializedName("Primer_Apellido")
     private String surnameOne;
+
+    @SerializedName("Segundo_Apellido")
     private String surnameSecond;
+
+    @SerializedName("Tipo_De_Documento")
     private String cc;
+
+    @SerializedName("Numero_de_documento")
     private String documentType;
+
+    @SerializedName("Correo_Electronico")
     private String email;
+
+    @SerializedName("Nombre_Del_Curso")
     private String courseName;
+
+    @SerializedName("Hora_De_Preferencia")
     private String preferredSchedule;
 
-    // Agregar los getters y setters para cada campo
+
+    // Getters y Setters
     public String getNameOne() {
         return nameOne;
     }
