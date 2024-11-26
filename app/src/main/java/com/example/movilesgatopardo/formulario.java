@@ -8,8 +8,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.firestore.FirebaseFirestore;
-import java.util.HashMap;
-import java.util.Map;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+import services.FormService;
+import services.UserForm;
 
 public class formulario extends AppCompatActivity {
 
@@ -34,7 +39,17 @@ public class formulario extends AppCompatActivity {
         preferredSchedule = findViewById(R.id.preferredSchedule);
         sendAndNavigateButton = findViewById(R.id.sendAndNavigateButton); // Botón único
 
+        // Firebase instance
         FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        // Retrofit instance
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://192.168.128.10:3001/")  // Asegúrate de usar el puerto correcto
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        // Interface de Retrofit para JSON Server
+        FormService formService = retrofit.create(FormService.class);
 
         // Listener para el botón que envía los datos y navega a la siguiente actividad
         sendAndNavigateButton.setOnClickListener(v -> {
@@ -50,31 +65,47 @@ public class formulario extends AppCompatActivity {
 
             // Validación de los campos
             if (checkData(mNameOne, mSurnameOne, mEmail, mCC)) {
-                Map<String, Object> formData = new HashMap<>();
-                formData.put("nameOne", mNameOne);
-                formData.put("nameSecond", mNameSecond);
-                formData.put("surnameOne", mSurnameOne);
-                formData.put("surnameSecond", mSurnameSecond);
-                formData.put("cc", mCC);
-                formData.put("documentType", mDocumentType);
-                formData.put("email", mEmail);
-                formData.put("courseName", mCourseName);
-                formData.put("preferredSchedule", mPreferredSchedule);
+                // Crear el objeto UserForm
+                UserForm userForm = new UserForm();
+                userForm.setNameOne(mNameOne);
+                userForm.setNameSecond(mNameSecond);
+                userForm.setSurnameOne(mSurnameOne);
+                userForm.setSurnameSecond(mSurnameSecond);
+                userForm.setCc(mCC);
+                userForm.setDocumentType(mDocumentType);
+                userForm.setEmail(mEmail);
+                userForm.setCourseName(mCourseName);
+                userForm.setPreferredSchedule(mPreferredSchedule);
 
-                // Guardar en la base de datos Firebase
+                // Guardar en Firebase Firestore
                 db.collection("forms")
-                        .add(formData)
+                        .add(userForm)  // Guardar directamente el objeto UserForm
                         .addOnSuccessListener(documentReference -> {
-                            showToast("¡Formulario enviado!. ID: " + documentReference.getId(), 8000);
+                            showToast("¡Formulario enviado a Firebase!. ID: " + documentReference.getId(), 8000);
                             clearFields(); // Limpiar los campos después de un envío exitoso
 
                             // Navegar a la siguiente actividad después de un envío exitoso
                             Intent intent = new Intent(formulario.this, ultima.class);
                             startActivity(intent);
                         })
-                        .addOnFailureListener(e ->
-                                showToast("Error al enviar. Intente más tarde.", 8000)
-                        );
+                        .addOnFailureListener(e -> showToast("Error al enviar a Firebase. Intente más tarde.", 8000));
+
+                // Enviar el formulario a JSON Server usando Retrofit
+                formService.submitFormulary(userForm).enqueue(new Callback<Void>() {
+                    @Override
+                    public void onResponse(Call<Void> call, Response<Void> response) {
+                        if (response.isSuccessful()) {
+                            showToast("Formulario enviado a JSON Server.", 8000);
+                        } else {
+                            showToast("Error al enviar a JSON Server. Intente más tarde.", 8000);
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<Void> call, Throwable t) {
+                        showToast("Error al enviar a JSON Server. Intente más tarde.", 8000);
+                    }
+                });
             } else {
                 showToast("Complete y valide todos los campos para poder continuar.", 8000);
             }
@@ -89,7 +120,7 @@ public class formulario extends AppCompatActivity {
 
     // Método para validar el formato del correo electrónico
     private boolean isValidEmail(String email) {
-        return email.matches("^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$");
+        return email.matches("^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA3Z]{2,7}$");
     }
 
     // Método para validar la longitud del número de cédula

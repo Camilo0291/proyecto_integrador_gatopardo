@@ -59,7 +59,7 @@ public class register extends AppCompatActivity {
 
         // Inicializar Retrofit
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.128.10:3000/")
+                .baseUrl("http://192.168.128.10:3000/") // Cambia según tu configuración
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -116,6 +116,8 @@ public class register extends AppCompatActivity {
             public void onResponse(Call<Void> call, Response<Void> response) {
                 if (response.isSuccessful()) {
                     showToast("¡Registro exitoso en el backend!", 8000);
+                    // Navegar a la actividad de talleres después del registro
+                    navigateToTalleres();
                 } else {
                     showToast("Error al registrar en el backend: " + response.code(), 8000);
                 }
@@ -126,6 +128,13 @@ public class register extends AppCompatActivity {
                 showToast("Error de conexión con el backend: " + t.getMessage(), 8000);
             }
         });
+    }
+
+    // Método para navegar a la actividad Talleres
+    private void navigateToTalleres() {
+        Intent intent = new Intent(register.this, talleres.class);
+        startActivity(intent);
+        finish(); // Opcional: cerrar la actividad actual
     }
 
     // Validar el formato del correo

@@ -18,4 +18,7 @@ package services;
             this.email_address = email_address;
         }
 
+        public String getPassword() {
+            return password;
+        }
     }
