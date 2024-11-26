@@ -37,14 +37,14 @@ public class formulario extends AppCompatActivity {
         emailFormulary = findViewById(R.id.emailFormulary);
         courseName = findViewById(R.id.courseName);
         preferredSchedule = findViewById(R.id.preferredSchedule);
-        sendAndNavigateButton = findViewById(R.id.sendAndNavigateButton); // Botón único
+        sendAndNavigateButton = findViewById(R.id.sendAndNavigateButton);
 
         // Firebase instance
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         // Retrofit instance
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.128.10:3001/")  // Asegúrate de usar el puerto correcto
+                .baseUrl("http://192.168.128.10:3001/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -64,7 +64,7 @@ public class formulario extends AppCompatActivity {
             String mPreferredSchedule = preferredSchedule.getText().toString();
 
             // Validación de los campos
-            if (checkData(mNameOne, mSurnameOne, mEmail, mCC)) {
+            if (checkData(mNameOne, mSurnameOne, mEmail, mCC, mCourseName, mPreferredSchedule)) {
                 // Crear el objeto UserForm
                 UserForm userForm = new UserForm();
                 userForm.setNameOne(mNameOne);
@@ -82,7 +82,7 @@ public class formulario extends AppCompatActivity {
                         .add(userForm)  // Guardar directamente el objeto UserForm
                         .addOnSuccessListener(documentReference -> {
                             showToast("¡Formulario enviado a Firebase!. ID: " + documentReference.getId(), 8000);
-                            clearFields(); // Limpiar los campos después de un envío exitoso
+                            clearFields();
 
                             // Navegar a la siguiente actividad después de un envío exitoso
                             Intent intent = new Intent(formulario.this, ultima.class);
@@ -113,14 +113,20 @@ public class formulario extends AppCompatActivity {
     }
 
     // Método para validar datos del formulario
-    private boolean checkData(String nameOne, String surnameOne, String email, String cc) {
-        return !nameOne.isEmpty() && !surnameOne.isEmpty() && !email.isEmpty() && !cc.isEmpty()
-                && isValidEmail(email) && isValidCC(cc);
+    private boolean checkData(String nameOne, String surnameOne, String email, String cc, String courseName, String preferredSchedule) {
+        return !nameOne.isEmpty()
+                && !surnameOne.isEmpty()
+                && !email.isEmpty()
+                && !cc.isEmpty()
+                && !courseName.isEmpty()
+                && !preferredSchedule.isEmpty()
+                && isValidEmail(email)
+                && isValidCC(cc);
     }
 
     // Método para validar el formato del correo electrónico
     private boolean isValidEmail(String email) {
-        return email.matches("^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA3Z]{2,7}$");
+        return email.matches("^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$");
     }
 
     // Método para validar la longitud del número de cédula

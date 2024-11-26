@@ -54,7 +54,7 @@ json-server --watch formulary.json --port 3001
 
 ### 4. Clonar Repositorio
 ```bash
-git clone [URL_DEL_REPOSITORIO]
+git clone https://github.com/Camilo0291/proyecto_integrador_gatopardo.git
 ```
 
 ### 5. Abrir Proyecto en Android Studio

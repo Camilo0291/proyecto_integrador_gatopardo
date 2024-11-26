@@ -42,8 +42,6 @@ public class register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
-        // Configuración del padding automático para el layout principal
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -59,7 +57,7 @@ public class register extends AppCompatActivity {
 
         // Inicializar Retrofit
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.128.10:3000/") // Cambia según tu configuración
+                .baseUrl("http://192.168.128.10:3000/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
