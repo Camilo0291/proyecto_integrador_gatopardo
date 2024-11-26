@@ -77,5 +77,15 @@ git clone https://github.com/Camilo0291/proyecto_integrador_gatopardo.git
 - Mantén ambos servidores JSON corriendo mientras trabajas en la aplicación
 - Comprueba que todos los servicios estén funcionando antes de iniciar el emulador
 
+<h2 align="left">Equipo de Desarrollo</h2>
+
+###
+* *[Carlos Sánchez](https://github.com/CASanchezc5)*: colaborador
+* *[Mariana Garzon](https://github.com/marigarzon)*: colaborador
+* *[Camilo Quintana](https://github.com/Camilo0291)*: colaborador
+* *[Alejandra Tamayo](https://github.com/thaleja)*: colaborador
+* *[Edison Martinez](https://github.com/Edisonmo30)*: colaborador
+###
+
 </p>
 

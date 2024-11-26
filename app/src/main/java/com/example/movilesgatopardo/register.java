@@ -57,7 +57,7 @@ public class register extends AppCompatActivity {
 
         // Inicializar Retrofit
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.128.10:3000/")
+                .baseUrl("http://192.168.128.10:3000/")  // Asegúrate de usar la URL correcta
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -75,8 +75,7 @@ public class register extends AppCompatActivity {
                         mAuth.createUserWithEmailAndPassword(mEmail, mPassword)
                                 .addOnCompleteListener(task -> {
                                     if (task.isSuccessful()) {
-                                        showToast("¡Registro exitoso en Firebase!", 8000);
-                                        // Registro en el backend
+                                        // Registro en el backend después de Firebase
                                         registerUserWithBackend(userService, mEmail, mPassword);
                                     } else {
                                         if (task.getException() instanceof FirebaseAuthUserCollisionException) {
@@ -113,7 +112,8 @@ public class register extends AppCompatActivity {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
                 if (response.isSuccessful()) {
-                    showToast("¡Registro exitoso en el backend!", 8000);
+                    // Mostrar mensaje único de éxito
+                    showToast("¡Registro exitoso en Firebase y en el backend!", 8000);
                     // Navegar a la actividad de talleres después del registro
                     navigateToTalleres();
                 } else {
